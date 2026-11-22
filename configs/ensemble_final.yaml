@@ -1,0 +1,12 @@
+# The final ensemble (blind-test W-bMAE 33.52): equal-weight mean of 7 members, then a monotone map.
+members:
+  - runs/student-s42
+  - runs/student-s43
+  - runs/student-s44
+  - runs/student-near3-s42
+  - runs/student-near3-s43
+  - runs/timescale-latency
+  - runs/timescale-prefix
+calibration:          # 75%-strength version of a map fitted by participant cross-validation on dev nights
+  knots:  [0.0, 20.0, 40.0, 60.0, 90.0, 150.0, 300.0, 600.0]
+  values: [0.0, 18.5, 32.5, 48.85, 85.75, 161.5, 360.0, 600.0]

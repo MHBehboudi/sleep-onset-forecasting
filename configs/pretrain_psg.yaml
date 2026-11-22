@@ -1,0 +1,11 @@
+# Stage 1. Pretrain the no-FM network on external PSG sleep-onset episodes mapped into Muse slots
+# (PhysioNet 2018 + BOAS + HMC). Zero-shot on Muse this alone scored 39.3 on the mixed test-like view.
+temporal: gru
+fm: false
+source: cache/source_episodes.npz
+epochs: 10
+lr: 1.0e-3
+wd: 0.05
+batch: 16
+p_fault: 0.4
+trim_max: 900

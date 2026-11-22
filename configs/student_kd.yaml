@@ -1,0 +1,16 @@
+# Stage 3a. Causal student distilled from the lookahead teachers (3 seeds in the final ensemble).
+temporal: gru
+fm: true
+init: runs/pretrain/final_ema.pt
+nights: all
+kd: [cache/kd/teacher-f0.npz, cache/kd/teacher-f1.npz]
+kd_w: 1.0
+near_w: 1.0
+epochs: 25
+lr: 1.0e-3
+wd: 0.05
+batch: 16
+p_fault: 0.4
+trim_max: 900
+gain_p: 0.2
+chan_sd: 0.1

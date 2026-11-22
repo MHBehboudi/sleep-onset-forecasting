@@ -1,0 +1,13 @@
+# Stage 3c. Selective-timescale member trained from scratch with the latency-score point geometry
+# and the matched-delay ranking term. Different inductive bias and loss -> a useful ensemble partner.
+temporal: timescale
+fm: false
+nights: all
+latency_point: true
+delay_rank_w: 0.10
+epochs: 60
+lr: 1.0e-3
+wd: 0.05
+batch: 16
+p_fault: 0.4
+trim_max: 900

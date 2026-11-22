@@ -1,0 +1,13 @@
+# Stage 3d. Selective-timescale member with short-prefix training (cold-start experience) and the
+# matched-delay ranking term.
+temporal: timescale
+fm: false
+nights: all
+delay_rank_w: 0.10
+prefix_w: 0.25
+epochs: 60
+lr: 1.0e-3
+wd: 0.05
+batch: 16
+p_fault: 0.4
+trim_max: 900

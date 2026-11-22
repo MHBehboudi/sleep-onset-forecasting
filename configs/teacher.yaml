@@ -1,0 +1,18 @@
+# Stage 2. Lookahead teacher: identical network, but at packet k it is trained to predict the countdown as
+# of packet k-6, i.e. it sees 30 s of the future. Trained twice, each time on one participant fold, and
+# used only to label the other fold (cross-fitting), so a student never distils predictions made on
+# its own training nights. Teacher alone: 30.45 s on the clean-300 development view.
+temporal: gru
+fm: true
+init: runs/pretrain/final_ema.pt
+nights: all
+fold_train: 0
+shift: 6
+epochs: 25
+lr: 1.0e-3
+wd: 0.05
+batch: 16
+p_fault: 0.4
+trim_max: 900
+gain_p: 0.2
+chan_sd: 0.1
