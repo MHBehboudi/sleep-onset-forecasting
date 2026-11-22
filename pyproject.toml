@@ -1,0 +1,12 @@
+[project]
+name = "sentinel-sleep-onset"
+version = "1.0.0"
+description = "Fault-aware streaming forecaster of time to sleep onset (first N2) from 4-channel Muse EEG"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.3", "numpy>=1.26", "pyyaml>=6.0", "safetensors>=0.4"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
